@@ -4,6 +4,12 @@ type MemberGetId struct {
 	Id int `json:"Id"`
 }
 
+type MemberGetList struct {
+	FirstName string `gorm:"column:FirstName" json:"FirstName"`
+	LastName  string `gorm:"column:LastName" json:"LastName"`
+	Phone     string `gorm:"column:Phone" json:"Phone"`
+}
+
 type MemberInfo struct {
 	MemberID  int32  `gorm:"column:MemberID;primaryKey;autoIncrement:true" json:"MemberID"`
 	FirstName string `gorm:"column:FirstName" json:"FirstName"`
